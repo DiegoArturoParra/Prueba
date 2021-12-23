@@ -9,3 +9,8 @@ y para el proyecto web se utilizo web forms entity framework version 4.7.2
 
 comandos para correr el proyecto
 se debe tener instalado el ide de visual studio 2019
+
+postdata: para crear la base de datos se utilizo Code First Migrations
+add-migrations Initial
+update-database
+la ruta de conexión esta en el archivo appsettings.json de prueba.Api
