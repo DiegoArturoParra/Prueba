@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Prueba.Web.Vistas
+namespace Prueba.Web.vistas
 {
 
 
@@ -15,22 +15,49 @@ namespace Prueba.Web.Vistas
     {
 
         /// <summary>
-        /// form1 control.
+        /// Formulario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm Formulario;
 
         /// <summary>
-        /// BTN_buscar control.
+        /// BTN_buscarGatos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BTN_buscar;
+        protected global::System.Web.UI.WebControls.Button BTN_buscarGatos;
+
+        /// <summary>
+        /// LB_Mensaje control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LB_Mensaje;
+
+        /// <summary>
+        /// BTN_guardar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BTN_guardar;
+
+        /// <summary>
+        /// ImagenGato control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ImagenGato;
 
         /// <summary>
         /// GV_Gatos control.

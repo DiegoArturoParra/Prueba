@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Gatos.aspx.cs" Inherits="Prueba.Web.Vistas.Gatos" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Gatos.aspx.cs" Async="true" Inherits="Prueba.Web.vistas.Gatos" %>
 
 <!DOCTYPE html>
 
@@ -7,14 +7,32 @@
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="Formulario" runat="server">
         <div>
-            <asp:Button ID="BTN_buscar" BackColor="Green" Text="Buscar Gato" OnClick="BTN_buscar_Click" runat="server" />
+            <asp:Button Text="Buscar gatos" ID="BTN_buscarGatos" OnClick="BTN_buscarGatos_Click" runat="server" />
+            <asp:Label ID="LB_Mensaje" Font-Bold="true" Visible="false" runat="server" />
+            <asp:Button Text="Guardar" ID="BTN_guardar" Visible="false" OnClick="BTN_guardar_Click" runat="server" />
         </div>
-        <asp:GridView ID="GV_Gatos" runat="server">
 
-        </asp:GridView>
-        grid
+        <br />
+        <div>
+            <asp:Image ID="ImagenGato" Width="400" Height="400" runat="server" />
+        </div>
+        <div>
+            <asp:GridView ID="GV_Gatos" OnRowCommand="GV_Gatos_RowCommand" AutoGenerateColumns="False" runat="server">
+                <Columns>
+                    <asp:BoundField DataField="id" HeaderText="ID" SortExpression="id" />
+                    <asp:ImageField DataImageUrlField="url" ControlStyle-Height="200" ControlStyle-Width="250" HeaderText="Imagen" SortExpression="url" />
+                    <asp:BoundField DataField="width" HeaderText="Ancho" SortExpression="width" />
+                    <asp:BoundField DataField="height" HeaderText="Altura" SortExpression="height" />
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <asp:LinkButton ID="btnEliminar" runat="server" Text="Eliminar" CommandName="Eliminar"></asp:LinkButton>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+            </asp:GridView>
+        </div>
     </form>
 </body>
 </html>
